@@ -33,6 +33,7 @@ public class MyInteger_Test {
 		assertEquals(int0.getiValue(),3);
 	}
 	
+	@Test
 	public void TestisEven(){
 		MyInteger int1 = new MyInteger(6);
 		MyInteger int2 = new MyInteger(7);
@@ -47,6 +48,7 @@ public class MyInteger_Test {
 		assertEquals(MyInteger.isEven(int2),false);
 	}
 	
+	@Test
 	public void TestisOdd(){
 		MyInteger int1 = new MyInteger(6);
 		MyInteger int2 = new MyInteger(7);
@@ -61,6 +63,7 @@ public class MyInteger_Test {
 		assertEquals(MyInteger.isOdd(int2),true);
 	}
 	
+	@Test
 	public void TestisPrime(){
 		MyInteger int1 = new MyInteger(6);
 		MyInteger int2 = new MyInteger(7);
@@ -73,6 +76,18 @@ public class MyInteger_Test {
 		
 		assertEquals(MyInteger.isPrime(int1),false);
 		assertEquals(MyInteger.isPrime(int2),true);
+	}
+	
+	@Test
+	public void TestisEquals(){
+		MyInteger int3 = new MyInteger(4);
+		MyInteger int4 = new MyInteger(5);
+		
+		assertEquals(int3.isEquals(int3),true);
+		assertEquals(int4.isEquals(int3),false);
+		
+		assertEquals(int3.isEquals(4),true);
+		assertEquals(int4.isEquals(4),false);
 	}
 
 }

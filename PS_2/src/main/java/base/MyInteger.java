@@ -4,7 +4,9 @@ public class MyInteger {
 	
 	private int iValue;
 
-	public MyInteger(int i) {}
+	public MyInteger(int i) {
+		this.iValue = i;
+	}
 	
 	
 	public int getiValue() {
@@ -13,9 +15,7 @@ public class MyInteger {
 	public void setiValue(int iValue) {
 		this.iValue = iValue;
 	}
-	public Integer Value(){
-		return iValue;
-	}
+	
 	
 	
 	public boolean isEven(){
@@ -35,8 +35,8 @@ public class MyInteger {
 	
 	
 	public boolean isPrime(){
-		for (int i = 2; i < this.iValue; i++){
-			if(iValue % i != 0)
+		for (int divisor = 2; divisor < this.iValue / 2; divisor++){
+			if(iValue % divisor != 0)
 				return true;
 	}
 		return false;
@@ -59,8 +59,8 @@ public class MyInteger {
 		}
 	
 	public static boolean isPrime(int iValue){
-		for (int i = 2; i < iValue; i++){
-			if(iValue % i != 0)
+		for (int divisor = 2; divisor < iValue / 2; divisor++){
+			if(iValue % divisor != 0)
 				return true;
 		}
 		return false;
@@ -81,19 +81,19 @@ public class MyInteger {
 	}
 	
 	public static boolean isPrime(MyInteger C){
-		for (int i = 2; i < C.iValue; i++){
-			if(C.iValue % i != 0)
+		for (int divisor = 2; divisor < C.iValue / 2; divisor++){
+			if(C.iValue % divisor != 0)
 				return true;
 		}
 		return false;
 		}
-	public boolean equals(int D){
+	public boolean isEquals(int D){
 		if (D == iValue){
 			return true;
 		}
 		return false;
 		}
-	public boolean equals(MyInteger E){
+	public boolean isEquals(MyInteger E){
 		if (E.iValue == this.iValue){
 			return true;
 		}
