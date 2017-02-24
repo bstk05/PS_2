@@ -4,6 +4,9 @@ public class MyInteger {
 	
 	private int iValue;
 
+	public MyInteger(int i) {}
+	
+	
 	public int getiValue() {
 		return iValue;
 	}

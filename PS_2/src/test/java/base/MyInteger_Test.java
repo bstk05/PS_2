@@ -27,18 +27,52 @@ public class MyInteger_Test {
 	}
 
 	@Test
-	public void TestMyInteger() {
+	public void TestiValue(){
+		MyInteger int0 = new MyInteger(3);
+		int0.setiValue(3);
+		assertEquals(int0.getiValue(),3);
+	}
+	
+	public void TestisEven(){
+		MyInteger int1 = new MyInteger(6);
+		MyInteger int2 = new MyInteger(7);
 		
-		MyInteger int1 = new MyInteger();
-		boolean dExpectedodd = false;
-		boolean dExpectedeven = true;
-		boolean dExpectedPrime = false;
+		assertEquals(int1.isEven(),true);
+		assertEquals(int2.isEven(),false);
 		
-		assertEquals(int1.isOdd(),dExpectedodd);
+		assertEquals(MyInteger.isEven(6),true);
+		assertEquals(MyInteger.isEven(7),false);
 		
-		assertEquals(int1.isEven(),dExpectedeven);
+		assertEquals(MyInteger.isEven(int1),true);
+		assertEquals(MyInteger.isEven(int2),false);
+	}
+	
+	public void TestisOdd(){
+		MyInteger int1 = new MyInteger(6);
+		MyInteger int2 = new MyInteger(7);
 		
-		assertEquals(int1.isPrime(),dExpectedPrime);
+		assertEquals(int1.isOdd(),false);
+		assertEquals(int2.isOdd(),true);
+		
+		assertEquals(MyInteger.isOdd(6),false);
+		assertEquals(MyInteger.isOdd(7),true);
+		
+		assertEquals(MyInteger.isOdd(int1),false);
+		assertEquals(MyInteger.isOdd(int2),true);
+	}
+	
+	public void TestisPrime(){
+		MyInteger int1 = new MyInteger(6);
+		MyInteger int2 = new MyInteger(7);
+		
+		assertEquals(int1.isPrime(),false);
+		assertEquals(int2.isPrime(),true);
+		
+		assertEquals(MyInteger.isPrime(6),false);
+		assertEquals(MyInteger.isPrime(7),true);
+		
+		assertEquals(MyInteger.isPrime(int1),false);
+		assertEquals(MyInteger.isPrime(int2),true);
 	}
 
 }
